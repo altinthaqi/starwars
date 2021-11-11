@@ -174,7 +174,7 @@ body .slider .slide-text h3 {
   font-size: 30px;
   line-height: 30px;
   font-weight: 700;
-  width: 80%;
+  max-width: 650px;
 }
 
 body .slider .slide-text p {
@@ -182,7 +182,7 @@ body .slider .slide-text p {
   margin-bottom: 30px;
   font-size: 16px;
   font-weight: 600;
-  width: 80%;
+  max-width: 650px;
 }
 
 body .slider .slide-text a {
@@ -257,7 +257,7 @@ body .vision .container .video-box .video-text p {
   font-weight: 600;
   text-align: center;
   max-width: 400px;
-  margin: 10px 0px;
+  margin-top: 10px;
 }
 
 body .vision .container .video-box .video-text a:nth-child(3) {
@@ -280,5 +280,99 @@ body .vision .container .video-box .video-text a:nth-child(4) {
   font-size: 16px;
   background-color: #313131;
   color: #fff;
+}
+
+body .vision .container .vision-ep {
+  width: 100%;
+  background-color: red;
+}
+
+body .vision .container .vision-ep .vision-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #effcff;
+  margin-top: -4px;
+}
+
+body .vision .container .vision-ep .vision-boxes .vision-box {
+  width: 47%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  cursor: pointer;
+  margin: 30px 0px;
+}
+
+body .vision .container .vision-ep .vision-boxes .vision-box:hover .box-text .lights .light1 {
+  background-color: white;
+  -webkit-box-shadow: 0px 1px 15px 5px rgba(255, 255, 255, 0.4);
+          box-shadow: 0px 1px 15px 5px rgba(255, 255, 255, 0.4);
+}
+
+body .vision .container .vision-ep .vision-boxes .vision-box:hover .box-text .lights .light2 {
+  background-color: white;
+  -webkit-box-shadow: 0px 1px 15px 5px rgba(255, 255, 255, 0.4);
+          box-shadow: 0px 1px 15px 5px rgba(255, 255, 255, 0.4);
+}
+
+body .vision .container .vision-ep .vision-boxes .vision-box img {
+  max-width: 266px;
+  width: 100%;
+  border-radius: 6px 0px 0px 6px;
+}
+
+body .vision .container .vision-ep .vision-boxes .vision-box .box-text {
+  border-radius: 0px 6px 6px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #1a1a1ae6;
+  padding: 20px 0px 0px 10px;
+}
+
+body .vision .container .vision-ep .vision-boxes .vision-box .box-text .lights {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .vision .container .vision-ep .vision-boxes .vision-box .box-text .lights .light1 {
+  background-color: #999;
+  padding: 4px 13px;
+  border-radius: 25px;
+  margin: 0px 10px;
+}
+
+body .vision .container .vision-ep .vision-boxes .vision-box .box-text .lights .light2 {
+  background-color: #999;
+  padding: 4px 5px;
+  border-radius: 25px;
+}
+
+body .vision .container .vision-ep .vision-boxes .vision-box .box-text h2 {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  margin: 20px 0px;
 }
 /*# sourceMappingURL=style.css.map */

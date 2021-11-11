@@ -116,7 +116,7 @@ body {
         font-size: 30px;
         line-height: 30px;
         font-weight: 700;
-        width: 80%;
+        max-width: 650px;
       }
 
       p {
@@ -124,7 +124,7 @@ body {
         margin-bottom: 30px;
         font-size: 16px;
         font-weight: 600;
-        width: 80%;
+        max-width: 650px;
       }
 
       a {
@@ -193,7 +193,7 @@ body {
             font-weight: 600;
             text-align: center;
             max-width: 400px;
-            margin: 10px 0px;
+            margin-top: 10px;
           }
 
           a:nth-child(3) {
@@ -217,6 +217,76 @@ body {
             color: #fff;
           }
         }
+      }
+
+      .vision-ep {
+        width: 100%;
+        background-color: red;
+        .vision-boxes {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          background-color: #effcff;
+          margin-top: -4px;
+
+          .vision-box {
+            width: 47%;
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+            margin: 30px 0px;
+
+            &:hover .box-text .lights .light1 {
+              background-color: white;
+              box-shadow: 0px 1px 15px 5px rgba(255, 255, 255, 0.4);
+            }
+            &:hover .box-text .lights .light2 {
+              background-color: white;
+              box-shadow: 0px 1px 15px 5px rgba(255, 255, 255, 0.4);
+            }
+
+            img {
+              max-width: 266px;
+              width: 100%;
+              border-radius: 6px 0px 0px 6px;
+            }
+
+            .box-text {
+              border-radius: 0px 6px 6px 0px;
+              display: flex;
+              flex-direction: column;
+              background-color: #1a1a1ae6;
+              padding: 20px 0px 0px 10px;
+
+              .lights {
+                display: flex;
+                flex-direction: row;
+
+                .light1 {
+                  background-color: $gray;
+                  padding: 4px 13px;
+                  border-radius: 25px;
+                  margin: 0px 10px;
+                }
+                .light2 {
+                  background-color: $gray;
+                  padding: 4px 5px;
+                  border-radius: 25px;
+                }
+              }
+
+              h2 {
+                font-size: 16px;
+                color: $title-color;
+                font-weight: 600;
+                margin: 20px 0px;
+              }
+            }
+          }
+        }
+      }
+
+      .vision-slides {
       }
     }
   }
