@@ -32,11 +32,11 @@ body {
 
       .links {
         input {
-          background-color: rgb(54, 54, 54);
+          background-color: rgba(41, 41, 41, 0.7);
           border: none;
           border-radius: 6px;
-          padding: 8px 12px;
-          color: $text-color;
+          padding: 10px 21px;
+          color: $gray;
         }
 
         .row {
@@ -287,6 +287,127 @@ body {
       }
 
       .vision-slides {
+        background-color: #effcff;
+        padding-top: 50px;
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 500px;
+          width: 100%;
+          position: relative;
+          margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides2 {
+          display: none;
+          cursor: pointer;
+
+          &:hover .vision-slide-box .box-text .lights .light1 {
+            background-color: rgb(0, 0, 0);
+            box-shadow: 0px 1px 15px 5px rgba(255, 255, 255, 0.4);
+          }
+          &:hover .vision-slide-box .box-text .lights .light2 {
+            background-color: rgb(0, 0, 0);
+            box-shadow: 0px 1px 15px 5px rgba(255, 255, 255, 0.4);
+          }
+
+          img {
+            width: 100%;
+            border-radius: 6px 6px 0px 0px;
+          }
+          .vision-slide-box {
+            cursor: pointer;
+
+            .box-text {
+              border-radius: 0px 0px 6px 6px;
+              display: flex;
+              flex-direction: column;
+              background-color: #1a1a1ae6;
+              padding: 20px 0px 0px 20px;
+              max-width: 500px;
+              margin: -5px auto;
+
+              .lights {
+                display: flex;
+                flex-direction: row;
+
+                .light1 {
+                  background-color: rgb(0, 0, 0);
+                  padding: 4px 13px;
+                  border-radius: 25px;
+                  margin: 0px 10px;
+                }
+                .light2 {
+                  background-color: rgb(0, 0, 0);
+                  padding: 4px 5px;
+                  border-radius: 25px;
+                }
+              }
+
+              h2 {
+                font-size: 16px;
+                color: $title-color;
+                font-weight: 600;
+                margin: 20px 0px;
+              }
+            }
+          }
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          margin-top: -22px;
+          padding: 16px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Fading animation */
+        .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+          from {
+            opacity: 0.4;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes fade {
+          from {
+            opacity: 0.4;
+          }
+          to {
+            opacity: 1;
+          }
+        }
       }
     }
   }

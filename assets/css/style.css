@@ -83,11 +83,11 @@ body header .nav-1 .logo img {
 }
 
 body header .nav-1 .links input {
-  background-color: #363636;
+  background-color: rgba(41, 41, 41, 0.7);
   border: none;
   border-radius: 6px;
-  padding: 8px 12px;
-  color: #ccc;
+  padding: 10px 21px;
+  color: #999;
 }
 
 body header .nav-1 .links .row {
@@ -374,5 +374,149 @@ body .vision .container .vision-ep .vision-boxes .vision-box .box-text h2 {
   color: #fff;
   font-weight: 600;
   margin: 20px 0px;
+}
+
+body .vision .container .vision-slides {
+  background-color: #effcff;
+  padding-top: 50px;
+  /* Slideshow container */
+  /* Hide the images by default */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+  /* Fading animation */
+}
+
+body .vision .container .vision-slides .slideshow-container {
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+body .vision .container .vision-slides .mySlides2 {
+  display: none;
+  cursor: pointer;
+}
+
+body .vision .container .vision-slides .mySlides2:hover .vision-slide-box .box-text .lights .light1 {
+  background-color: black;
+  -webkit-box-shadow: 0px 1px 15px 5px rgba(255, 255, 255, 0.4);
+          box-shadow: 0px 1px 15px 5px rgba(255, 255, 255, 0.4);
+}
+
+body .vision .container .vision-slides .mySlides2:hover .vision-slide-box .box-text .lights .light2 {
+  background-color: black;
+  -webkit-box-shadow: 0px 1px 15px 5px rgba(255, 255, 255, 0.4);
+          box-shadow: 0px 1px 15px 5px rgba(255, 255, 255, 0.4);
+}
+
+body .vision .container .vision-slides .mySlides2 img {
+  width: 100%;
+  border-radius: 6px 6px 0px 0px;
+}
+
+body .vision .container .vision-slides .mySlides2 .vision-slide-box {
+  cursor: pointer;
+}
+
+body .vision .container .vision-slides .mySlides2 .vision-slide-box .box-text {
+  border-radius: 0px 0px 6px 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #1a1a1ae6;
+  padding: 20px 0px 0px 20px;
+  max-width: 500px;
+  margin: -5px auto;
+}
+
+body .vision .container .vision-slides .mySlides2 .vision-slide-box .box-text .lights {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .vision .container .vision-slides .mySlides2 .vision-slide-box .box-text .lights .light1 {
+  background-color: black;
+  padding: 4px 13px;
+  border-radius: 25px;
+  margin: 0px 10px;
+}
+
+body .vision .container .vision-slides .mySlides2 .vision-slide-box .box-text .lights .light2 {
+  background-color: black;
+  padding: 4px 5px;
+  border-radius: 25px;
+}
+
+body .vision .container .vision-slides .mySlides2 .vision-slide-box .box-text h2 {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  margin: 20px 0px;
+}
+
+body .vision .container .vision-slides .prev,
+body .vision .container .vision-slides .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body .vision .container .vision-slides .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+body .vision .container .vision-slides .prev:hover,
+body .vision .container .vision-slides .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+body .vision .container .vision-slides .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
