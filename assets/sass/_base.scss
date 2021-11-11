@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica";
+}
+
+body {
+  color: #aaa;
+  background-color: black;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+$gray: #999;
+
+$title-size: 1.25rem;
+$title-color: #fff;
+$title-height: 1.5rem;
+
+$text-size: 0.875rem;
+$text-color: #ccc;
+$text-height: 1.125rem;
