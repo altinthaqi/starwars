@@ -4,11 +4,14 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Helvetica";
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
   color: #aaa;
   background-color: black;
+  background-image: url(../img/background-image.jpeg);
 }
 
 .row {
@@ -45,5 +48,237 @@ body {
 .container {
   max-width: 1140px;
   margin: auto;
+}
+
+body header .nav-1 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 10vh;
+  margin: 0px 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../img/background-image.jpeg);
+}
+
+body header .nav-1 ul li {
+  margin: 0px 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+body header .nav-1 ul li:hover {
+  color: #fff;
+}
+
+body header .nav-1 .logo {
+  margin: auto;
+  max-width: 170px;
+}
+
+body header .nav-1 .logo img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+body header .nav-1 .links input {
+  background-color: #363636;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: #ccc;
+}
+
+body header .nav-1 .links .row {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: #999;
+  font-weight: 700;
+}
+
+body header .nav-1 .links .row p {
+  cursor: pointer;
+}
+
+body header .nav-1 .links .row p:hover {
+  color: #fff;
+}
+
+body header .nav-1 .links .row .linex {
+  font-size: 14px;
+  padding: 0px 10px;
+  font-weight: 300;
+}
+
+body header .nav-2 {
+  background-color: black;
+  width: 100%;
+}
+
+body header .nav-2 ul {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 6px 0px;
+  border: 1px solid #313131;
+}
+
+body header .nav-2 ul li {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px;
+  border-right: 1px solid #313131;
+  border-left: 1px solid #313131;
+  cursor: pointer;
+}
+
+body header .nav-2 ul li:hover {
+  color: #fff;
+}
+
+body header #stream {
+  font-size: 14px;
+  text-align: center;
+  padding: 12px 0px;
+  background-color: black;
+}
+
+body .slider .slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+body .slider .mySlides {
+  display: none;
+}
+
+body .slider .slide-text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 0px 12px;
+  -webkit-transform: translate(10%, 50%);
+          transform: translate(10%, 50%);
+  position: absolute;
+  bottom: 50%;
+  width: 40%;
+  max-width: 800px;
+  text-align: start;
+}
+
+body .slider .slide-text h3 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  width: 80%;
+}
+
+body .slider .slide-text p {
+  margin: 20px 0px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  width: 80%;
+}
+
+body .slider .slide-text a {
+  background-color: #016cf9;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+body .slider .fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body .bounty {
+  margin-top: 30px;
+}
+
+body .bounty .container img {
+  max-width: 1280px;
+  width: 100%;
+}
+
+body .vision {
+  margin-top: 60px;
+}
+
+body .vision .container .video-box {
+  position: relative;
+}
+
+body .vision .container .video-box video {
+  width: 100%;
+}
+
+body .vision .container .video-box .video-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body .vision .container .video-box .video-text img {
+  width: 300px;
+}
+
+body .vision .container .video-box .video-text p {
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  max-width: 400px;
+  margin: 10px 0px;
+}
+
+body .vision .container .video-box .video-text a:nth-child(3) {
+  padding: 12px 26px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: #016cf9;
+  color: #fff;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+body .vision .container .video-box .video-text a:nth-child(4) {
+  margin-top: 20px;
+  padding: 12px 26px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: #313131;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

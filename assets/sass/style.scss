@@ -1,1 +1,223 @@
 @import "base";
+
+body {
+  header {
+    .nav-1 {
+      justify-content: space-between;
+      min-height: 10vh;
+      margin: 0px 20px;
+      align-items: center;
+      background-image: url(../img/background-image.jpeg);
+
+      ul {
+        li {
+          margin: 0px 8px;
+          font-size: 18px;
+          cursor: pointer;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+      .logo {
+        margin: auto;
+        max-width: 170px;
+
+        img {
+          width: 100%;
+          margin-top: 20px;
+        }
+      }
+
+      .links {
+        input {
+          background-color: rgb(54, 54, 54);
+          border: none;
+          border-radius: 6px;
+          padding: 8px 12px;
+          color: $text-color;
+        }
+
+        .row {
+          align-self: flex-end;
+          margin-top: 12px;
+          font-size: $text-size;
+          color: $gray;
+          font-weight: 700;
+
+          p {
+            cursor: pointer;
+            &:hover {
+              color: #fff;
+            }
+          }
+
+          .linex {
+            font-size: 14px;
+            padding: 0px 10px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+    .nav-2 {
+      background-color: black;
+      width: 100%;
+      ul {
+        width: 100%;
+        justify-content: center;
+        padding: 6px 0px;
+        border: 1px solid rgb(49, 49, 49);
+        li {
+          font-size: 16px;
+          font-weight: 600;
+          padding: 12px;
+          border-right: 1px solid rgb(49, 49, 49);
+          border-left: 1px solid rgb(49, 49, 49);
+          cursor: pointer;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+    #stream {
+      font-size: 14px;
+      text-align: center;
+      padding: 12px 0px;
+      background-color: black;
+    }
+  }
+
+  .slider {
+    .slideshow-container {
+      width: 100%;
+      position: relative;
+      margin: auto;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .slide-text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 0px 12px;
+      transform: translate(10%, 50%);
+      position: absolute;
+      bottom: 50%;
+      width: 40%;
+      max-width: 800px;
+      text-align: start;
+
+      h3 {
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 700;
+        width: 80%;
+      }
+
+      p {
+        margin: 20px 0px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        font-weight: 600;
+        width: 80%;
+      }
+
+      a {
+        background-color: rgb(1, 108, 249);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: 700;
+      }
+    }
+
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
+  .bounty {
+    margin-top: 30px;
+    .container {
+      img {
+        max-width: 1280px;
+        width: 100%;
+      }
+    }
+  }
+
+  .vision {
+    margin-top: 60px;
+    .container {
+      .video-box {
+        position: relative;
+        video {
+          width: 100%;
+        }
+        .video-text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          img {
+            width: 300px;
+          }
+          p {
+            color: black;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            max-width: 400px;
+            margin: 10px 0px;
+          }
+
+          a:nth-child(3) {
+            padding: 12px 26px;
+            border: none;
+            font-weight: 600;
+            font-size: 16px;
+            background-color: rgb(1, 108, 249);
+            color: #fff;
+            border-radius: 6px;
+            margin-top: 20px;
+          }
+          a:nth-child(4) {
+            margin-top: 20px;
+            padding: 12px 26px;
+            border-radius: 6px;
+            border: none;
+            font-weight: 600;
+            font-size: 16px;
+            background-color: rgb(49, 49, 49);
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
