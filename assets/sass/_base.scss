@@ -5,6 +5,7 @@
   font-family: "Helvetica";
   list-style: none;
   text-decoration: none;
+  // scroll-behavior: smooth;
 }
 
 body {
@@ -13,24 +14,16 @@ body {
   background-image: url(../img/background-image.jpeg);
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-}
-.column {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-center {
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-
 .container {
   max-width: 1140px;
   margin: auto;
+}
+
+.hide {
+  display: none;
+}
+.show {
+  display: block;
 }
 
 $gray: #999;

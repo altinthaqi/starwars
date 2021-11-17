@@ -1,3 +1,4 @@
+//First Slider - Banner, Automatic
 let slideIndex = 0;
 showSlides();
 
@@ -15,6 +16,7 @@ function showSlides() {
   setTimeout(showSlides, 5000);
 }
 
+//Second Slider - Vision, Manual
 let slideIndex2 = 1;
 showSlides2(slideIndex2);
 

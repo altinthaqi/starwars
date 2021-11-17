@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/shareNews.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <nav class="nav-1">
+            <ul>
+                <li><i class="fab fa-facebook"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-youtube"></i></li>
+            </ul>
+            <div class="logo">
+                <img src="../img/logo.png" alt="">
+            </div>
+            <div class="links">
+                <input type="text" placeholder="Search Star Wars">
+                <div class="row">
+                    <p>LOG IN</p>
+                    <p class="linex"> // </p>
+                    <p>REGISTER</p>
+                </div>
+            </div>
+        </nav>
+        <nav class="nav-2">
+
+            <ul>
+                <li><a href="../../index.html">HOME</a></li>
+                <li>USE API</li>
+            </ul>
+
+        </nav>
+        <p id="stream">STREAM STAR WARS ON DISNEY+</p>
+    </header>
+
+
+    <section class="newsSection">
+        <div class="newsBanner">
+            <p id="nb1">WANT TO SHARE SOMETHING <br /> WITH THE COMMUNITY?</p>
+            <p id="nb2">- this is the place to be!</p>
+        </div>
+        <div class="container">
+
+            <p id="news-quote"><em>
+                    REBELLIONS ARE BUILT ON HOME<br />
+                    Go for it, build one!
+                </em></p>
+            <form class="shareNews" action="#">
+                <input autocomplete="off" id="author" placeholder="Anonymous" name="author" type="text"
+                    placeholder="Author"><br />
+                <input autocomplete="off" id="title" name="title" type="text" placeholder="Title"><br />
+                <input autocomplete="off" id="img" name="img" type="text" placeholder="Image Url"><br />
+                <textarea placeholder="News Content" autocomplete="off" id="content" name="content"
+                    style="resize: none;" name="" id="" cols="40" rows="15"></textarea><br />
+                <button type="button" onclick="Submit()" id="submit" name="submit" type="submit">SHARE</button>
+            </form>
+
+            <div class="shared-n-title">
+                <p></p>
+            </div>
+
+            <div class="news">
+                <div class="showNews">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <p>FOLLOW STAR WARS:</p>
+            <ul id="f-links">
+                <li><i class="fab fa-facebook"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-youtube"></i></li>
+            </ul>
+            <p>TM & © Lucasfilm Ltd. All Rights Reserved</p>
+            <ul>
+                <li>Terms of Use</li>
+                <li>Additional Content Information</li>
+                <li>Privacy Policy</li>
+                <li>Children’s Online Privacy Policy</li>
+                <li>Your California Privacy Rights</li>
+                <li>Star Wars at shopDisney</li>
+                <li>Star Wars Helpdesk</li>
+                <li>Interest-Based Ads</li>
+                <li>Do Not Sell My Personal Information</li>
+            </ul>
+
+        </div>
+    </footer>
+
+    <i onclick="scrollHandler()" class="fas fa-arrow-up go-top hide"></i>
+    <script src="../js/shareNews.js"></script>
+</body>
+
+</html>
