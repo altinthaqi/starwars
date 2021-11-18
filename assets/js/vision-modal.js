@@ -13,6 +13,7 @@ function toggleClass2() {
 
 btnVision.addEventListener("click", () => {
   toggleClass2();
+  visionModal.scrollIntoView();
   window.onscroll = function () {
     window.scrollTo(1550, 1550);
   };
