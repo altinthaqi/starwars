@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/shareNews.css">
+    <link rel="stylesheet" href="../css/useApi.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+
     <header>
         <nav class="nav-1">
             <ul>
@@ -37,48 +38,27 @@
 
             <ul>
                 <li><a href="../../index.html">HOME</a></li>
-                <li><a href="#">SHARE NEWS</a></li>
-                <li><a href="useApi.html">USE API</a></li>
+                <li><a href="shareNews.html">SHARE NEWS</a></li>
+                <li><a href="#">USE API</a></li>
             </ul>
 
         </nav>
         <p id="stream">STREAM STAR WARS ON DISNEY+</p>
     </header>
 
-
-    <section class="newsSection">
-        <div class="newsBanner">
-            <!-- <p id="nb1">WANT TO SHARE SOMETHING <br /> WITH THE COMMUNITY?</p> -->
-            <p id="nb1" class="typing"></p>
-            <p id="nb1" class="typing"></p>
-            <p id="nb2" class="typing"></p>
-        </div>
+    <section class="controlApi">
         <div class="container">
+            <input type="text" name="searchBar" id="searchBar" placeholder="Search for a Character">
+        </div>
+    </section>
 
-            <p id="news-quote"><em>
-                    REBELLIONS ARE BUILT ON HOME<br />
-                    Go for it, build one!
-                </em></p>
-            <form class="shareNews" action="#">
-                <input autocomplete="off" id="author" placeholder="Anonymous" name="author" type="text"
-                    placeholder="Author"><br />
-                <input autocomplete="off" id="title" name="title" type="text" placeholder="Title"><br />
-                <input autocomplete="off" id="img" name="img" type="text" placeholder="Image Url"><br />
-                <textarea placeholder="News Content" autocomplete="off" id="content" name="content"
-                    style="resize: none;" name="" id="" cols="40" rows="15"></textarea><br />
-                <button type="button" onclick="Submit()" id="submit" name="submit" type="submit">SHARE</button>
-            </form>
-
-            <div class="shared-n-title">
-                <p></p>
-            </div>
-
-            <div class="news">
-                <div class="showNews">
-                </div>
+    <section class="showData">
+        <div class="container">
+            <div class="boxes">
             </div>
         </div>
     </section>
+
 
     <footer>
         <div class="footer">
@@ -106,7 +86,9 @@
     </footer>
 
     <i onclick="scrollHandler()" class="fas fa-arrow-up go-top hide"></i>
-    <script src="../js/shareNews.js"></script>
+
+    <script src="../../node_modules/axios/dist/axios.js"></script>
+    <script src="../js/useApi.js"></script>
 </body>
 
 </html>

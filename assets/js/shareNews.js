@@ -47,9 +47,10 @@ function updateNewsTable() {
   });
   //Upd DOM var
   scrollElm = document.querySelectorAll(".news-id");
-  newNews = document.querySelectorAll(".new-news");
   //Render HTML
   showNews.innerHTML = news_html;
+  //After render, select DOM elms
+  newNews = document.querySelectorAll(".new-news");
   //Reset mode to create perseri
   mode = "create";
 }
@@ -104,7 +105,7 @@ function updateNews(currNews) {
   updateNewsTable();
 }
 
-//Fetch LS, filter news id !== id's te dergume si parameter(updateNewsTable()) ===> set, update
+//Fetch LS, filter news id !== id's te dergume si parameter(updateNewsTable()); ===> set, update
 function deleteNews(id) {
   const ls_news = JSON.parse(localStorage.getItem("news"));
   const n_news = ls_news.filter((news) => news.id !== id);
@@ -227,7 +228,7 @@ type = () => {
     }
   }
   //FUNCTION, TIME DELAY => per word
-  setTimeout(type, 100);
+  setTimeout(type, 50);
 };
 //Run function on start
 type();
