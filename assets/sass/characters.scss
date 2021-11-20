@@ -7,7 +7,14 @@
   text-decoration: none;
   scroll-behavior: smooth;
 }
-
+#searchBar {
+  border-radius: 6px;
+  font-weight: 600;
+  border: 1px solid #ffe81f;
+  &:focus {
+    outline: none;
+  }
+}
 .hide {
   visibility: hidden;
 }

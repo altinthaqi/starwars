@@ -149,6 +149,8 @@ header {
       ),
       url(../img/newsBanner.jpg);
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;

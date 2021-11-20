@@ -9,6 +9,16 @@
   scroll-behavior: smooth;
 }
 
+#searchBar {
+  border-radius: 6px;
+  font-weight: 600;
+  border: 1px solid #ffe81f;
+}
+
+#searchBar:focus {
+  outline: none;
+}
+
 .hide {
   visibility: hidden;
 }
@@ -437,4 +447,4 @@ footer .footer ul li:hover {
   background-color: black;
   color: #ffe81f;
 }
-/*# sourceMappingURL=useApi.css.map */
+/*# sourceMappingURL=characters.css.map */
