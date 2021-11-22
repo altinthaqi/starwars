@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STARWARS - Tickets</title>
-    <link rel="stylesheet" href="../css/tickets.css">
+    <title>STARWARS - Quiz</title>
+    <link rel="stylesheet" href="../css/quiz.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
     <header>
         <nav class="nav-1">
             <ul>
@@ -40,75 +41,49 @@
                 <li><a href="../../index.html">HOME</a></li>
                 <li><a href="shareNews.html">SHARE NEWS</a></li>
                 <li><a href="characters.html">CHARACTERS</a></li>
-                <li><a href="#">TICKETS</a></li>
-                <li><a href="quiz.html">QUIZ</a></li>
+                <li><a href="tickets.html">TICKETS</a></li>
+                <li><a href="#">QUIZ</a></li>
             </ul>
 
         </nav>
         <p id="stream">STREAM STAR WARS ON DISNEY+</p>
     </header>
 
-    <section class="cinema">
-        <div class="container">
-            <div class="cinemaBox">
-                <div class="image">
-                    <img src="../img/starwarsPoster.jpg" alt="">
-                </div>
-                <div class="intro">
-                    <h2>Star Wars: The Rise of Skywalker</h2>
-                    <p>Get your tickets now, movie starts in:</p>
-                </div>
-                <div class="countDown">
-                    <div class="info">
-                        <p>Days: </p>
-                        <p id="days">30</p>
-                    </div>
-                    <div class="info">
-                        <p>Hours: </p>
-                        <p id="hours">20</p>
-                    </div>
-                    <div class="info">
-                        <p>Minutes: </p>
-                        <p id="minutes">10</p>
-                    </div>
+    <section class="quiz-container">
+        <div class="container" id="container">
+            <div class="quiz-header" id="quiz">
+                <h2 id="question">Question Text</h2>
+                <ul>
+                    <li>
+                        <input type="radio" name="answer" id="a" class="answer">
+                        <label for="a" id="a_text">Answer</label>
+                    </li>
 
-                    <div class="info">
-                        <p>Seconds: </p>
-                        <p id="seconds">24</p>
-                    </div>
-                </div>
-                <div class="prices">
-                    <div class="info">
-                        <p>1x Ticket = </p>
-                        <p id="ticket"> 4.99$</p>
-                    </div>
-                    <div class="info">
-                        <input onclick="checkOfferBtn()" id="checkOffer" type="checkbox">
-                        <label for="checkOffer">Drinks: <br><b>1$</b> per person</label>
-                    </div>
-                    <div class="info">
-                        <input onclick="checkVipBtn()" id="checkVip" type="checkbox">
-                        <label for="checkVip">VIP Seats: <br><b>3$</b> per person</label>
-                    </div>
+                    <li>
+                        <input type="radio" name="answer" id="b" class="answer">
+                        <label for="b" id="b_text">Answer</label>
+                    </li>
 
-                    <div class="info"> <input placeholder="0" max="20" id="people" min="1" type="number">
-                        <label for="people">tickets</label>
-                    </div>
+                    <li>
+                        <input type="radio" name="answer" id="c" class="answer">
+                        <label for="c" id="c_text">Answer</label>
+                    </li>
 
-                </div>
-                <div class="total">
-                    <div class="info">
-                        <p>Total Price: </p>
-                        <p id="total">4.99$</p>
-                    </div>
-                </div>
+                    <li>
+                        <input type="radio" name="answer" id="d" class="answer">
+                        <label for="d" id="d_text">Answer</label>
+                    </li>
 
-                <div class="btn checkout">
-                    <a>CHECKOUT</a>
-                </div>
+                </ul>
             </div>
+
+            <button id="submit">NEXT</button>
         </div>
+
     </section>
+
+
+
 
     <footer>
         <div class="footer">
@@ -135,8 +110,7 @@
         </div>
     </footer>
 
-    <script src="../js/tickets.js"></script>
-
+    <script src="../js/quiz.js"></script>
 </body>
 
 </html>

@@ -233,5 +233,11 @@ type = () => {
 //Run function on start
 type();
 
-//if(useri) => shfaqi t'dhanat ne LS
+//(isNull == null) => krijo nje empty array te news
+let isNull = JSON.parse(localStorage.getItem("news"));
+if (isNull == null) {
+  localStorage.setItem("news", JSON.stringify([]));
+}
+
+//(isNull != null) update the news
 updateNewsTable();
