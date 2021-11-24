@@ -19,7 +19,7 @@
 
 In order to use all project features, **install dependencies:**
 
-`npm install`
+`npm install axios`
 
 ## Features built with JavaScript:
 
