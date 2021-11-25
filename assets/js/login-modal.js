@@ -3,7 +3,6 @@ let modal = document.querySelector(".modal");
 let modalBackground = document.querySelector(".modal-active");
 let loginBtn = document.querySelector(".loginBtn");
 let closeModal = document.querySelector("#toggle-modal");
-
 //Funksioni qe i bon hide ose show modal & overlay
 function toggleClass() {
   //if contains hide => remove that class, same for others.

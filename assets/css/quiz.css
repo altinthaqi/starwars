@@ -14,59 +14,55 @@ body {
   position: relative;
 }
 
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 @media (max-width: 799px) {
   #quote {
     margin: 0px auto;
     font-size: 18px;
     width: 80%;
   }
+  .hidden {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
   header {
-    color: #aaa;
+    display: none;
   }
-  header .nav-1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    min-height: 10vh;
-    margin: 0px 20px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-image: url(../img/background-image.jpeg);
-  }
-  header .nav-1 ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  header .nav-1 ul li {
-    margin: 0px 8px;
-    font-size: 18px;
+  #toggle-navbar {
+    color: white;
+    padding: 15px;
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    z-index: 9999;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
+    left: 85%;
+    font-size: 26px;
     cursor: pointer;
   }
-  header .nav-1 ul li:hover {
-    color: #fff;
-  }
-  header .nav-1 .logo {
-    margin: auto;
-    max-width: 170px;
-  }
-  header .nav-1 .logo img {
+  .responsive-header {
+    position: relative;
+    z-index: 99;
+    height: 100vh;
+    background-image: url(../img/background-image.jpeg);
     width: 100%;
-    margin-top: 20px;
   }
-  header .nav-1 .links {
+  .responsive-header ul {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -74,81 +70,31 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  header .nav-1 .links input {
-    background-color: rgba(41, 41, 41, 0.7);
-    border: none;
-    border-radius: 6px;
-    padding: 10px 21px;
-    color: #999;
-  }
-  header .nav-1 .links .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    margin-top: 12px;
-    font-size: 0.8rem;
-    color: #999;
-    font-weight: 700;
-  }
-  header .nav-1 .links .row p {
-    cursor: pointer;
-  }
-  header .nav-1 .links .row p:hover {
-    color: #fff;
-  }
-  header .nav-1 .links .row .linex {
-    font-size: 14px;
-    padding: 0px 10px;
-    font-weight: 300;
-  }
-  header .nav-2 {
-    background-color: black;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
     width: 100%;
   }
-  header .nav-2 ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 6px 0px;
-    border: 1px solid #313131;
+  .responsive-header ul li {
+    padding: 20px 40px;
+    background-color: #202020;
+    border-radius: 10px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
-  header .nav-2 ul li {
-    font-size: 16px;
-    font-weight: 600;
-    padding: 12px;
-    border-right: 1px solid #313131;
-    border-left: 1px solid #313131;
-    cursor: pointer;
+  .responsive-header ul li:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
-  header .nav-2 ul li:hover {
-    color: #fff;
-  }
-  header .nav-2 ul li a {
-    color: #aaaaaa;
-  }
-  header .nav-2 ul li a:hover {
-    color: #fff;
-  }
-  header #stream {
-    font-size: 14px;
-    text-align: center;
-    padding: 12px 0px;
-    background-color: black;
+  .responsive-header ul li a {
+    color: white;
+    font-weight: 800;
   }
   .quiz-container {
     margin: 100px 0px;
@@ -281,6 +227,9 @@ body {
 }
 
 @media (min-width: 800px) {
+  #toggle-navbar {
+    display: none;
+  }
   #quote {
     margin: 0px auto;
     font-size: 21px;
