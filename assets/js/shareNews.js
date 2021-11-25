@@ -23,13 +23,13 @@ function scrollWhenCreate() {
 }
 
 //Funksioni qe e bon uodate tabelat prej LS
-function updateNewsTable() {
+async function updateNewsTable() {
   //Kthe nga JSON obj => Array w/ parse.
-  const ls_news = JSON.parse(localStorage.getItem("news"));
+  const ls_news = await JSON.parse(localStorage.getItem("news"));
   let news_html = "";
   //Futu ne storage, for n'th -"item" += HTML
   let i = 1;
-  ls_news.map((item) => {
+  await ls_news.map((item) => {
     news_html += `
     <div class="new-news">
     <p class="news-id">#${i}</p>
@@ -56,9 +56,9 @@ function updateNewsTable() {
 }
 
 //Fut Lajme ne LS. (news) = currentNews
-function addNewsToStorage(news) {
+async function addNewsToStorage(news) {
   //Parses the STRING items
-  allNews = JSON.parse(localStorage.getItem("news"));
+  allNews = await JSON.parse(localStorage.getItem("news"));
   //currentNews bohet push => allNews
   allNews.push(news);
   //Array => kthe perseri ne STRING w/ Stringify
@@ -75,9 +75,9 @@ function clearInputs() {
 
 //Get Items from LS ==> Check if current-news.id == id parameter,
 //TRUE => write item's values in inputs ===> mode = 'edit' ('CREATE' onclick = checks for mode)
-function editNews(id) {
-  const ls_news = JSON.parse(localStorage.getItem("news"));
-  const n_news = ls_news.filter((news) => news.id == id);
+async function editNews(id) {
+  const ls_news = await JSON.parse(localStorage.getItem("news"));
+  const n_news = await ls_news.filter((news) => news.id == id);
   console.log(n_news[0].id);
   formAuthor.value = n_news[0].author;
   formTitle.value = n_news[0].title;
@@ -90,9 +90,9 @@ function editNews(id) {
 
 //if(mode=='edit') call updateNews ===> Accepts currNews, if currNews.id == editID (passed from editNews)
 //Changes values, returns new news, stringify and update!
-function updateNews(currNews) {
-  const ls_news = JSON.parse(localStorage.getItem("news"));
-  const u_news = ls_news.map((n) => {
+async function updateNews(currNews) {
+  const ls_news = await JSON.parse(localStorage.getItem("news"));
+  const u_news = await ls_news.map((n) => {
     if (n.id == editID) {
       n.author = currNews.author;
       n.title = currNews.title;
@@ -106,16 +106,16 @@ function updateNews(currNews) {
 }
 
 //Fetch LS, filter news id !== id's te dergume si parameter(updateNewsTable()); ===> set, update
-function deleteNews(id) {
-  const ls_news = JSON.parse(localStorage.getItem("news"));
-  const n_news = ls_news.filter((news) => news.id !== id);
+async function deleteNews(id) {
+  const ls_news = await JSON.parse(localStorage.getItem("news"));
+  const n_news = await ls_news.filter((news) => news.id !== id);
   //Set new list, update()
   localStorage.setItem("news", JSON.stringify(n_news));
   updateNewsTable();
 }
 
 //Funksioni onclick "create"
-function Submit(e) {
+async function Submit(e) {
   //Nese Author == "", default => "Anonymous"
   formAuthor.value == "" ? (formAuthor.value = "Anonymous") : formAuthor.value;
   //Form Validation
@@ -139,15 +139,15 @@ function Submit(e) {
     //Current => Add to LS
     if (mode == "create") {
       alert("The 'CREATING' Force is strong with this one!");
-      addNewsToStorage(currentNews);
-      updateNewsTable();
+      await addNewsToStorage(currentNews);
+      await updateNewsTable();
       scrollWhenCreate();
     }
 
     //Update LS & HTML
     if (mode == "edit") {
       alert("The 'EDITING' Force is strong with this one!");
-      updateNews(currentNews);
+      await updateNews(currentNews);
       updateNewsTable();
     }
 
@@ -181,49 +181,47 @@ let texts = [
 ];
 
 //Inicializimi variablave
-let index1 = 0;
-let index2 = 0;
-let index3 = 0;
-let index = 0;
-let fullText = "";
-let currentText = "";
-let fullText1 = "";
-let fullText2 = "";
-let fullText3 = "";
-let currentText1 = "";
-let currentText2 = "";
-let currentText3 = "";
+let atWord1 = 0;
+let atWord2 = 0;
+let atWord3 = 0;
+let arrayText1 = "";
+let arrayText2 = "";
+let arrayText3 = "";
+let newText1 = "";
+let newText2 = "";
+let newText3 = "";
 
 //First Line typing
 function firstTyping() {
-  fullText1 = texts[0];
-  currentText1 = fullText1.slice(0, ++index1);
-  document.querySelectorAll("#nb1")[0].textContent = currentText1;
+  arrayText1 = texts[0];
+  newText1 = arrayText1.slice(0, ++atWord1);
+  document.querySelectorAll("#nb1")[0].textContent = newText1;
 }
 
 //First Line typing
 function secondTyping() {
-  fullText2 = texts[1];
-  currentText2 = fullText2.slice(0, ++index2);
-  document.querySelectorAll("#nb1")[1].textContent = currentText2;
+  arrayText2 = texts[1];
+  newText2 = arrayText2.slice(0, ++atWord2);
+  document.querySelectorAll("#nb1")[1].textContent = newText2;
 }
 
 //First Line typing
 function thirdTyping() {
-  fullText3 = texts[2];
-  currentText3 = fullText3.slice(0, ++index3);
-  document.querySelector("#nb2").textContent = currentText3;
+  arrayText3 = texts[2];
+  newText3 = arrayText3.slice(0, ++atWord3);
+  document.querySelector("#nb2").textContent = newText3;
 }
 
+//PSE SPO BOHET ME ASYNC AWAIT?????
 //Funksioni per typing
 type = () => {
   //Run firstTyping()
   firstTyping();
   //if firstTyping() is done, start secondtyping()
-  if (currentText1.length === fullText1.length) {
+  if (newText1.length === arrayText1.length) {
     secondTyping();
     //if secondTyping() is done, start thirdtyping()
-    if (currentText2.length === fullText2.length) {
+    if (newText2.length === arrayText2.length) {
       thirdTyping();
     }
   }

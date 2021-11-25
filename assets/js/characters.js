@@ -10,6 +10,32 @@ const api_url = "https://akabab.github.io/starwars-api/api/";
 const api_all = "/all.json";
 const api_id = "id/1.json";
 
+//API CONSUMPTION ME PROMISE
+// axios
+//   .get(`${api_url}${api_all}`)
+//   .then((response) => {
+//     fillData(response.data);
+//     characters = response.data;
+//   })
+//   .catch((error) => console.log(error));
+
+//API CONSUMPTION ME PROMISE Async/Await
+async function consumeApi() {
+  //try-catch nese ka error
+  try {
+    //kjo "await" me fetch api
+    const consumedApi = await axios.get(`${api_url}${api_all}`);
+    await fillData(consumedApi.data);
+    characters = consumedApi.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+//E di se sosht e nevojshme qekjo, po provova me e bo nje -IIFE- function per qejf
+(async () => {
+  await consumeApi();
+})();
+
 //Search characters function
 searchBar.addEventListener("keyup", (e) => {
   //Events value = lowercase for case insensitive
@@ -21,15 +47,6 @@ searchBar.addEventListener("keyup", (e) => {
   //Keep calling fillData to update characters, send filteredCharacters param
   fillData(filteredCharacters);
 });
-
-//axios get(api) => call fillData => add data to characters array
-axios
-  .get(`${api_url}${api_all}`)
-  .then((response) => {
-    fillData(response.data);
-    characters = response.data;
-  })
-  .catch((error) => console.log(error));
 
 //This is where characters are created, map data, for every item create a box
 async function fillData(data) {
