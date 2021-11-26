@@ -31,6 +31,7 @@ body {
     display: none;
   }
   #searchBar {
+    width: 80%;
     border-radius: 6px;
     font-weight: 600;
     border: 1px solid #ffe81f;
@@ -80,7 +81,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
   }
   .responsive-header ul li {

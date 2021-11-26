@@ -56,7 +56,7 @@ body {
     cursor: pointer;
   }
   body .responsive-header {
-    position: relative;
+    position: absolute;
     z-index: 99;
     height: 100vh;
     background-image: url(../img/background-image.jpeg);
@@ -81,11 +81,11 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 100vh;
-    width: 100%;
+    height: 90vh;
+    width: 80%;
   }
   body .responsive-header ul li {
-    padding: 20px 40px;
+    padding: 15px 30px;
     background-color: #202020;
     border-radius: 10px;
     -webkit-transition: 0.3s;
@@ -220,6 +220,10 @@ body {
     position: absolute;
     z-index: 99;
   }
+  body .slider img {
+    height: 100%;
+    min-height: 400px;
+  }
   body .slider .slideshow-container {
     width: 100%;
     position: relative;
@@ -230,8 +234,8 @@ body {
   }
   body .slider .slide-text {
     color: #f2f2f2;
-    font-size: 15px;
-    padding: 0px 12px;
+    font-size: 12px;
+    padding: 0px 10px;
     -webkit-transform: translate(10%, 50%);
             transform: translate(10%, 50%);
     position: absolute;
@@ -241,7 +245,7 @@ body {
     text-align: start;
   }
   body .slider .slide-text h3 {
-    font-size: 21px;
+    font-size: 18px;
     line-height: 25px;
     font-weight: 700;
   }
@@ -523,7 +527,7 @@ body {
     /* Fading animation */
   }
   body .vision .container .vision-slides .slideshow-container {
-    max-width: 500px;
+    max-width: 350px;
     width: 100%;
     position: relative;
     margin: auto;

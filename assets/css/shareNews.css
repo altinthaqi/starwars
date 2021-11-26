@@ -69,7 +69,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
   }
   .responsive-header ul li {
@@ -91,7 +91,7 @@ body {
   }
   .newsSection .newsBanner {
     position: relative;
-    min-height: 90vh;
+    min-height: 50vh;
     width: 100%;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(14, 4, 4, 0.8)), to(rgba(39, 37, 37, 0.8))), url(../img/newsBanner.jpg);
     background-image: linear-gradient(rgba(14, 4, 4, 0.8) rgba(20, 11, 11, 0.8) rgba(31, 24, 24, 0.8) rgba(0, 0, 0, 0.8), rgba(39, 37, 37, 0.8)), url(../img/newsBanner.jpg);
@@ -115,14 +115,14 @@ body {
   .newsSection .newsBanner #nb1 {
     color: white;
     font-weight: 900;
-    font-size: 36px;
+    font-size: 26px;
     text-align: start;
     width: 80%;
   }
   .newsSection .newsBanner #nb2 {
     color: #c7c7c7;
     font-weight: 500;
-    font-size: 21px;
+    font-size: 18px;
     text-align: start;
     width: 80%;
     margin-top: 20px;
@@ -174,7 +174,7 @@ body {
   }
   .newsSection .container form input {
     padding: 16px;
-    width: 380px;
+    width: 80%;
     font-size: 16px;
     border-radius: 6px;
     border: 1px solid #3b3603;
@@ -211,7 +211,7 @@ body {
   .newsSection .container form textarea {
     padding: 10px;
     font-size: 16px;
-    width: 450px;
+    width: 90%;
     border-radius: 6px;
     border: 1px solid #3b3603;
     background-color: #ececec;
