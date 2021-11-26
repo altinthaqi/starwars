@@ -7,7 +7,7 @@
 
 - [Repository](https://github.com/altinthaqi/StarWars "StarWars Repo")
 
-- [Live Deployment of the Project](<Homepage url> "Live View")
+- [Live Deployment of the Project](https://altinthaqi.github.io/StarWars/ "Live View")
 
 - [StarWars API used](https://akabab.github.io/starwars-api/ "API")
 
