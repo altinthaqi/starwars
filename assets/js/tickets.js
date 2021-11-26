@@ -110,7 +110,7 @@ checkoutElm.addEventListener("click", () => {
 function countDown() {
   //Init Variables
   let now = new Date();
-  let eventDate = new Date(now.getFullYear(), 12, 1);
+  let eventDate = new Date(now.getFullYear(), 11, 20);
 
   //Get Time
   let currentTime = now.getTime();
