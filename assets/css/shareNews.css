@@ -69,12 +69,12 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 90vh;
-    width: 100%;
+    height: 50%;
+    width: 80%;
   }
   .responsive-header ul li {
-    padding: 20px 40px;
-    background-color: #202020;
+    padding: 15px 30px;
+    border: 1px solid gray;
     border-radius: 10px;
     -webkit-transition: 0.3s;
     transition: 0.3s;

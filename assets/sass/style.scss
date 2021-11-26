@@ -44,11 +44,11 @@
         justify-content: space-evenly;
         align-items: center;
 
-        height: 90vh;
+        height: 50%;
         width: 80%;
         li {
           padding: 15px 30px;
-          background-color: rgb(32, 32, 32);
+          border: 1px solid gray;
           border-radius: 10px;
           transition: 0.3s;
 
