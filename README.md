@@ -7,7 +7,7 @@
 
 - [Repository](https://github.com/altinthaqi/StarWars "StarWars Repo")
 
-- [Live Deployment of the Project](https://altinthaqi.github.io/StarWars/ "Live View")
+- [Live Deployment of the Project](https://altinthaqi.github.io/starwars/ "Live View")
 
 - [StarWars API used](https://akabab.github.io/starwars-api/ "API")
 
@@ -22,8 +22,8 @@
 - Modals
 - Sliders
 - Typing Effects
-- CRUD w/Local Storage
-- Window Object Scroll Manipulations
+- CRUD on Local Storage
+- Window Object Manipulations
 - AXIOS API Consumption
 - Filtered Search
 - Countdown Timer
@@ -37,7 +37,3 @@
 - HTML
 - CSS
 - SCSS
-
-### 🤝 Support
-
-Contributions, issues, and feature requests are welcome!
